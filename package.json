@@ -1,8 +1,13 @@
 {
-  "name": "unblocked-games-website",
+  "name": "unblocked-proxy",
   "version": "1.0.0",
-  "description": "A website for unblocked games with integrated proxies",
-  "scripts": {},
-  "keywords": ["unblocked games", "proxy", "ultraviolet", "rammerhead"],
-  "license": "MIT"
+  "description": "A proxy search engine",
+  "main": "proxy.js",
+  "scripts": {
+    "start": "node proxy.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6"
+  }
 }
