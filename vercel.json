@@ -13,11 +13,11 @@
   "routes": [
     {
       "src": "/search(.*)",
-      "dest": "/proxy.js"
+      "dest": "/proxy.js"  // Route '/search' to the proxy.js file
     },
     {
       "src": "/(.*)",
-      "dest": "/public/$1"
+      "dest": "/public/$1"  // Serve static files from the 'public' folder
     }
   ]
 }
