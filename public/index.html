@@ -1,32 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Proxy Search</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proxy Search Engine</title>
 </head>
 <body>
-    <header class="header">
-        <h1>Proxy Search Engine</h1>
-        <p>Browse the web securely and unblock restricted content.</p>
-    </header>
-    <main class="search-container">
-        <input type="text" id="search-input" placeholder="Search the web..." />
-        <button onclick="searchProxy()">Search</button>
-    </main>
-    <footer class="footer">
-        <p>© 2024 Proxy Search Engine | Built with love</p>
-    </footer>
-    <script>
-        function searchProxy() {
-            const query = document.getElementById('search-input').value;
-            if (query) {
-                window.location.href = `/proxy?query=${encodeURIComponent(query)}`;
-            } else {
-                alert('Please enter a search query.');
-            }
-        }
-    </script>
+  <h1>Welcome to the Proxy Search Engine</h1>
+  <form action="/search" method="get">
+    <input type="text" name="q" placeholder="Search..." />
+    <button type="submit">Search</button>
+  </form>
 </body>
 </html>
