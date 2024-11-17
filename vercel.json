@@ -1,6 +1,19 @@
 {
-  "rewrites": [
-    { "source": "/ultraviolet", "destination": "https://your-ultraviolet-host-link" },
-    { "source": "/rammerhead", "destination": "https://your-rammerhead-host-link" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "proxy.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/proxy",
+      "dest": "proxy.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
   ]
 }
