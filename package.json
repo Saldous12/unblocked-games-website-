@@ -2,10 +2,7 @@
   "name": "unblocked-games-website",
   "version": "1.0.0",
   "description": "A website for unblocked games with integrated proxies",
-  "scripts": {
-    "start": "vercel dev",
-    "build": "vercel build"
-  },
+  "scripts": {},
   "keywords": ["unblocked games", "proxy", "ultraviolet", "rammerhead"],
   "license": "MIT"
 }
