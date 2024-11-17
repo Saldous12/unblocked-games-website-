@@ -3,42 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Unblocked Games</title>
+    <title>Advanced Proxy Search</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="hero">
-        <h1>Welcome to Unblocked Games</h1>
-        <p>Play games and browse freely with integrated proxies.</p>
-        <button onclick="window.location.href='#games'">Explore Games</button>
+    <header class="header">
+        <h1>Proxy Search Engine</h1>
+        <p>Browse the web securely and unblock restricted content.</p>
     </header>
-
-    <section id="games" class="games-section">
-        <h2>Games</h2>
-        <div class="game-card" onclick="openGame('https://examplegame.com')">
-            <img src="game1.jpg" alt="Game 1">
-            <h3>Game 1</h3>
-        </div>
-        <div class="game-card" onclick="openGame('https://examplegame2.com')">
-            <img src="game2.jpg" alt="Game 2">
-            <h3>Game 2</h3>
-        </div>
-    </section>
-
-    <section id="proxy" class="proxy-section">
-        <h2>Proxies</h2>
-        <button onclick="window.location.href='https://ultraviolet-proxy.com'">Ultraviolet Proxy</button>
-        <button onclick="window.location.href='https://rammerhead-proxy.com'">Rammerhead Proxy</button>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Unblocked Games. All rights reserved.</p>
+    <main class="search-container">
+        <input type="text" id="search-input" placeholder="Search the web..." />
+        <button onclick="searchProxy()">Search</button>
+    </main>
+    <footer class="footer">
+        <p>© 2024 Proxy Search Engine | Built with love</p>
     </footer>
-
     <script>
-        function openGame(url) {
-            const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
-            newWindow.opener = null;
+        function searchProxy() {
+            const query = document.getElementById('search-input').value;
+            if (query) {
+                window.location.href = `/proxy?query=${encodeURIComponent(query)}`;
+            } else {
+                alert('Please enter a search query.');
+            }
         }
     </script>
 </body>
