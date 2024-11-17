@@ -1,67 +1,51 @@
-/* Reset and Fonts */
-body, h1, h2, p {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-}
-
-body {
-    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
-    overflow-x: hidden;
-}
-
-.hero {
+    background: linear-gradient(45deg, #1e90ff, #ff69b4);
+    color: white;
     text-align: center;
-    padding: 100px 20px;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
 }
 
-.hero button {
-    padding: 10px 20px;
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.hero button:hover {
-    transform: scale(1.1);
-    background: #ff4500;
-}
-
-.games-section, .proxy-section {
+.header {
     padding: 50px 20px;
-    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
 }
 
-.game-card {
-    display: inline-block;
-    margin: 20px;
+.search-container {
+    margin: 50px auto;
+    max-width: 600px;
     padding: 20px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input {
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: 0.3s;
 }
 
-.game-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+.search-container button:hover {
+    background: #1e90ff;
 }
 
-.game-card img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-footer {
-    text-align: center;
+.footer {
     padding: 20px;
-    background: #333;
-    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 50px;
 }
