@@ -13,7 +13,7 @@
   "routes": [
     {
       "src": "/search(.*)",
-      "dest": "/proxy.js"  // Route '/search' to the proxy.js file
+      "dest": "/proxy.js"  // Ensure this routes search to your proxy.js file
     },
     {
       "src": "/(.*)",
