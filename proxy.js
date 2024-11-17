@@ -2,28 +2,22 @@ const express = require('express');
 const httpProxy = require('http-proxy-middleware');
 const app = express();
 
-// You can customize the target URL based on what you're searching
-const targetUrl = 'https://www.google.com/search'; // Or any search service you want to proxy
+// Define the target for the proxy
+const targetUrl = 'https://www.google.com';  // You can change this based on your needs
 
-// Proxy configuration for handling search
+// Proxy configuration
 app.use('/search', httpProxy.createProxyMiddleware({
   target: targetUrl,
   changeOrigin: true,
   pathRewrite: {
-    '^/search': '', // Remove the `/search` prefix before forwarding
+    '^/search': '',  // Remove the '/search' prefix when forwarding the request
   },
-  onProxyReq: (proxyReq, req, res) => {
-    if (req.query.q) {
-      // Ensure the query string is forwarded properly
-      proxyReq.path = `/search?q=${req.query.q}`;
-    }
-  }
 }));
 
-// Serve static files from the public folder
+// Serve static files
 app.use(express.static('public'));
 
-// Start the server
+// Listen on port
 app.listen(3000, () => {
-  console.log('Proxy server is running on http://localhost:3000');
+  console.log('Proxy server running on http://localhost:3000');
 });
