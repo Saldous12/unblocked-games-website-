@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/ultraviolet", "destination": "https://your-ultraviolet-host-link" },
+    { "source": "/rammerhead", "destination": "https://your-rammerhead-host-link" }
+  ]
+}
